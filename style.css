@@ -1,0 +1,42 @@
+:root {
+  --bgColor1-lightMode: #880042;
+  --bgColor2-lightMode: #ff1271;
+
+  --bgColor1-darkMode: #4f000d;
+  --bgColor2-darkMode: #d30404;
+}
+
+body.light-mode {
+  background: radial-gradient(var(--bgColor2-lightMode), var(--bgColor1-lightMode));
+  height: 100vh;
+  color: black;
+  font-family: sans-serif;}
+
+body.dark-mode {
+  background: radial-gradient(var(--bgColor2-darkMode), var(--bgColor1-darkMode));
+  height: 100vh;
+  color: white;
+  font-family: sans-serif;
+}
+
+#bg {
+  background-image: url('assets/pattern_skull.png');
+  background-size: 64px;
+  width: 100%;
+  height: 110vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.1;
+  animation: bgScroll 10s linear infinite;
+}
+
+@keyframes bgScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 64px 0;
+  }
+}
